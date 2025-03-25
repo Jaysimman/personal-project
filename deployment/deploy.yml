@@ -11,6 +11,7 @@ spec:
         metadata:
             labels:
                 name: apache-deploy
-    containers:
-        - image: jaysimman/personalproject
-          name: apache-pod
+        spec:
+            containers:
+                - image: jaysimman/personalproject
+                  name: apache-pod
