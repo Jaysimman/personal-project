@@ -1,1 +1,16 @@
-
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: apache-deploy
+spec:
+    replicas: 1
+    selector:
+        matchLables:
+            name: apache-deploy
+    template:
+        metadata:
+            labels:
+                name: apache-deploy
+    containers:
+        - image: jaysimman/personalproject
+          name: apache-pod
